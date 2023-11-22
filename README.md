@@ -3,7 +3,8 @@
 Implementing a simple ray tracer in Rust vs the C++ variant and understanding the differences in coding, usability and security for these variants, as a project for the course Principles of Programming Languages.<br><br>Inspired from this book: https://raytracing.github.io/v3/books/RayTracingInOneWeekend.html#overview <br><br> Credits to  Peter Shirley, Steve Hollasch and Trevor David Black. <br><br>
 The POPL angle here is that Rust provides a very safe and easy-to-use framework, which can vastly impact the industries that use ray tracers. We will also compare performance and observe the differences which will illustrate how one programming paradigm is better than the other.
 
-3) **Software Architecture** <br>
+2) **Software Architecture** <br>
+We are using Rust with cargo vs C++ with cmake default build configurations. <br>
 In our Rust implementation, we have used structs instead. Here are the details for that:
 
 Structs:
@@ -30,7 +31,7 @@ Here are the C++ implementation's software architecture details: <br>
 - hittable_list class
 - camera class
 
-4) **POPL Aspects**: [to update]
+3) **POPL Aspects**: [to update]
 
 - Hardware Utilisation: In an attempt to improve performance, we utilised structs in Rust versus the typical classes and objects in C++. We came across a test someone did on how passing small structs by copy is better than by reference in Rust, and how both of these are far faster than doing either of these in C++. <br><br>Here is the link: https://www.forrestthewoods.com/blog/should-small-rust-structs-be-passed-by-copy-or-by-borrow/ <br><br>
 The key takeaway of this test is that Rust utilises the hardware of the floating point vectors (f32) much better than C++ by default. Thus this was a fair assumption from our side that the Rust implementation would be faster because we have very frequently come across passing structs by copy or reference in functions in our code.
