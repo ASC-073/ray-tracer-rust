@@ -54,7 +54,9 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 
 
 
-4) **Results**: <todo>
+4) **Results**:
 
 5) **Potential For future work**:
 - The guide encourages us to delve into parallelism, which could utilise various cores of our CPU with random seeds, in order to massively improve performance. We could expand on our project by using the concept of Fearless Concurrency in Rust - which allows us to implement concurrency without any risk of data races or risks straight out of the box. This is done using a crate called `Rayon` which enables data parallelism.
+- Implementation Of the concept of lifetimes in this project could further increase run time safety, which can be implemented for various structs and other parameters for different parts of the code.
+- We can also incorporate a dynamic memory allocator as an addition to this project for game developers. One of the biggest reasons C++ is more popular than Rust in the game industry is that we cannot allocate memory in Rust, so adding this would increase ease of access for the users.
