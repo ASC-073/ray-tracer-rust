@@ -3,8 +3,8 @@
 Implementing a simple ray tracer in Rust vs the C++ variant and understanding the differences in coding, usability and security for these variants, as a project for the course Principles of Programming Languages.<br><br>Inspired from this book: https://raytracing.github.io/v3/books/RayTracingInOneWeekend.html#overview <br><br> Credits to  Peter Shirley, Steve Hollasch and Trevor David Black. <br><br>
 The POPL angle here is that Rust provides a very safe and easy-to-use framework, which can vastly impact the industries that use ray tracers. We will also compare performance and observe the differences which will illustrate how one programming paradigm is better than the other.
 
-2) **Software Architecture** <br>
-We are using Rust with cargo vs C++ with cmake default build configurations. <br>
+2) **Software Architecture** <br><br>
+We are using Rust with cargo vs C++ with cmake default build configurations.<br> Image generation is done using the ppm format, into which we have redirected our output.<br>
 In our Rust implementation, we have used structs instead. Here are the details for that:
 
 Structs:
