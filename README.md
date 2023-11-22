@@ -47,7 +47,11 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 ![Screenshot_20231122_224921](https://github.com/ASC-073/ray-tracer-rust/assets/100084094/2730901b-7401-4aef-b113-872f38e35ee0)
     
   which has unsafe pointers by default.
-- We used generics and traits instead of the C++ object oriented approach: [add examples]
+- We used traits instead of the C++ object oriented approach:
+
+![image](https://github.com/ASC-073/ray-tracer-rust/assets/100084094/a1be71b6-9f20-4603-b0b2-cbe14c87a34a)
+![image](https://github.com/ASC-073/ray-tracer-rust/assets/100084094/790a8da6-8e58-499b-a5e9-61c8efdbb946)
+
 
 
 4) **Results**: <todo>
