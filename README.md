@@ -1,13 +1,36 @@
 # ray-tracer-rust
-1) **PROBLEM STATEMENT**
+1) **PROBLEM STATEMENT** <br>
 Implementing a simple ray tracer in Rust vs the C++ variant and understanding the differences in coding, usability and security for these variants, as a project for the course Principles of Programming Languages. Inspired from this book: https://raytracing.github.io/v3/books/RayTracingInOneWeekend.html#overview, credits to  Peter Shirley, Steve Hollasch and Trevor David Black.
 The POPL angle here is that Rust provides a very safe and easy-to-use framework, which can vastly impact the industries that use ray tracers. We will also compare performance and observe the differences which will illustrate how one programming paradigm is better than the other.
 
-2) **Software Architecture**
-The C++ variant has used classes and objects to implement various concepts of ray tracing like camera, ray, colours, etc. The details are as follows: [to update]
-In our Rust implementation, we have used structs instead. Here are the details for that: [to update]
+3) **Software Architecture** <br>
+In our Rust implementation, we have used structs instead. Here are the details for that:
 
-3) **POPL Aspects**: [to update]
+Structs:
+- Camera
+- HittableList
+- HitRecord
+- Ray
+- Sphere
+- Vec3 (aliased for Color and Point3)
+- Lambertian
+- Metal
+- Dielectric
+
+We have also used two traits in our project:
+- Hittable
+- Material
+
+Here are the C++ implementation's software architecture details: <br>
+- vec3 class with aliases color and point3
+- ray class
+- struct hit_record
+- hittable class
+- sphere class
+- hittable_list class
+- camera class
+
+4) **POPL Aspects**: [to update]
 
 - Hardware Utilisation: In an attempt to improve performance, we utilised structs in Rust versus the typical classes and objects in C++. We came across a test someone did on how passing small structs by copy is better than by reference in Rust, and how both of these are far faster than doing either of these in C++. Here is the link: https://www.forrestthewoods.com/blog/should-small-rust-structs-be-passed-by-copy-or-by-borrow/
 The key takeaway of this test is that Rust utilises the hardware of the floating point vectors (f32) much better than C++ by default. Thus this was a fair assumption from our side that the Rust implementation would be faster because we have very frequently come across passing structs by copy or reference in functions in our code.
