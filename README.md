@@ -66,5 +66,5 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 **Instructions to run the Rust file**:
 - Extract the project zip file into the PC
 - Using a terminal, run the command: `cargo run > image.ppm`<br>
-<br>The C++ implementation can be found in the book link itself for comparison.<br>
+<br>The C++ implementation can be found in the guide link itself for comparison.<br>
 
