@@ -1,23 +1,25 @@
 # ray-tracer-rust
-Implementing a simple ray tracer in Rust vs the C++ variant and understanding the differences in coding, usability and security for these variants, as a project for the course Principles of Programming Languages.
+1) **PROBLEM STATEMENT**
+Implementing a simple ray tracer in Rust vs the C++ variant and understanding the differences in coding, usability and security for these variants, as a project for the course Principles of Programming Languages. Inspired from this book: https://raytracing.github.io/v3/books/RayTracingInOneWeekend.html#overview, credits to  Peter Shirley, Steve Hollasch and Trevor David Black.
+The POPL angle here is that Rust provides a very safe and easy-to-use framework, which can vastly impact the industries that use ray tracers. We will also compare performance and observe the differences which will illustrate how one programming paradigm is better than the other.
 
-Inspired from this book: https://raytracing.github.io/v3/books/RayTracingInOneWeekend.html#overview, credits to  Peter Shirley, Steve Hollasch and Trevor David Black.
+2) **Software Architecture**
+The C++ variant has used classes and objects to implement various concepts of ray tracing like camera, ray, colours, etc. The details are as follows: [to update]
+In our Rust implementation, we have used structs instead. Here are the details for that: [to update]
 
-Learning objectives: Rust syntax, modules, cargo, crates, references and borrowing, copy, clone, etc. crates, generics and traits, etc.
+3) **POPL Aspects**: [to update]
 
-We need to at least learn how to create images, so we do so in the ppm format. Using the basic colours red, blue and green, we can create patterns and combinations using the double loop (256x256 pixels). 
-Here: P3 is the image format which means text-based colour image. We also specified the image height, image width and maximum colour value for the render itself. 
+- Hardware Utilisation: In an attempt to improve performance, we utilised structs in Rust versus the typical classes and objects in C++. We came across a test someone did on how passing small structs by copy is better than by reference in Rust, and how both of these are far faster than doing either of these in C++. Here is the link: https://www.forrestthewoods.com/blog/should-small-rust-structs-be-passed-by-copy-or-by-borrow/
+The key takeaway of this test is that Rust utilises the hardware of the floating point vectors (f32) much better than C++ by default. Thus this was a fair assumption from our side that the Rust implementation would be faster because we have very frequently come across passing structs by copy or reference in functions in our code.
+- 
 
-Vec3 struct: We will use this to implement various concepts needed in image generation, from a point in 3D space to a specific colour using the combinations of red, blue and green. **We only used aliases for doing this, so we won’t get any warnings.**
+- We learned a lot about Rust project management and concepts that it has and how it is different from C++.
+We used structs instead of objects (C++)[expand]
+- We learnt how cargo works and why it is a much easier to use environment than default C++ variant (like to include the "rand" crate using cargo, all we have to do was use the command `cargo add rand`.
+- We learnt how borrowing and references work in Rust and how they are different in C++. There is no concept of owners in C++. [add examples]
+- We used generics and traits instead of the C++ object oriented approach: [add examples]
 
-Notice that vec3 is a small struct, so it is quite efficient to pass it by copy whenever we need to transfer it. Here is an interesting link: https://www.forrestthewoods.com/blog/should-small-rust-structs-be-passed-by-copy-or-by-borrow/
-Key takeaways: 
-- The code for passing structs by copying is much cleaner than by borrowing. Borrowing temporary values everytime for all small structs is impractical.
-- Performance isn't affected for small structs whether you pass by copy or by reference.
-- By default, regardless of passing by copy or by reference, Rust was doubly fast than C++ for this job.
-- "Rust is remarkably more efficient at utilizing my CPU's floating point vectors. The difference is enormous! Rust f32 is almost 3.5x more efficient than C++ float. And, for some reason, C++ double is twice as efficient as float!"
-This benchmarking reinforces our idea that implementing the ray tracer in Rust is going to be faster than C++ for large renders.
 
-Another important difference to note is that **package handling** is much easier to use and well-implemented than C++. Utilising any new cargo package requires just one command line instruction. The project is also much better maintained in this way - the Cargo.toml file holds all external dependencies used in the project as opposed to a header file in C++. We have used the rand crate in our project.
+4) **Results**: <todo>
 
-Cargo typically builds and runs the program in debug mode, which is slower. For improved speed, we are using cargo run --release to build and execute in release mode. All the renders are faster.
+5) **Potential For future work**: <todo>
