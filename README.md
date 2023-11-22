@@ -35,8 +35,6 @@ Here are the C++ implementation's software architecture details: <br>
 
 - Hardware Utilisation: In an attempt to improve performance, we utilised structs in Rust versus the typical classes and objects in C++. We came across a test someone did on how passing small structs by copy is better than by reference in Rust, and how both of these are far faster than doing either of these in C++. <br><br>Here is the link: https://www.forrestthewoods.com/blog/should-small-rust-structs-be-passed-by-copy-or-by-borrow/ <br><br>
 The key takeaway of this test is that Rust utilises the hardware of the floating point vectors (f32) much better than C++ by default. Thus this was a fair assumption from our side that the Rust implementation would be faster because we have very frequently come across passing structs by copy or reference in functions in our code.
-- 
-
 - We learned a lot about Rust project management and concepts that it has and how it is different from C++. We used structs and traits instead of the traditional object-oriented C++ implementation, and we have listed those structs and classes in the previous section for details.
 - We learnt how cargo works and why it is a much easier to use environment than default C++ variant (like to include the "rand" crate using cargo, all we have to do was use the command `cargo add rand`.
 - We learnt how borrowing and references work in Rust and how they are different in C++. There is no concept of owners in C++. <br>
