@@ -1,10 +1,10 @@
 # ray-tracer-rust
-1) **PROBLEM STATEMENT** <br>
+1) **PROBLEM STATEMENT** <br><br>
 Implementing a simple ray tracer in Rust vs the C++ variant and understanding the differences in coding, usability and security for these variants, as a project for the course Principles of Programming Languages.<br><br>Inspired from this book: https://raytracing.github.io/v3/books/RayTracingInOneWeekend.html#overview <br><br> Credits to  Peter Shirley, Steve Hollasch and Trevor David Black. <br><br>
 The POPL angle here is that Rust provides a very safe and easy-to-use framework, which can vastly impact the industries that use ray tracers. We will also compare performance and observe the differences which will illustrate how one programming paradigm is better than the other.
 
 2) **Software Architecture** <br><br>
-We are using Rust with cargo vs C++ with cmake default build configurations.<br> Image generation is done using the ppm format, into which we have redirected our output.<br>
+We are using Rust with cargo vs C++ with cmake default build configurations.<br><br> Image generation is done using the ppm format, into which we have redirected our output.<br><br>
 In our Rust implementation, we have used structs instead. Here are the details for that:
 
 Structs:
@@ -61,3 +61,10 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 - The guide encourages us to delve into parallelism, which could utilise various cores of our CPU with random seeds, in order to massively improve performance. We could expand on our project by using the concept of Fearless Concurrency in Rust - which allows us to implement concurrency without any risk of data races or risks straight out of the box. This is done using a crate called `Rayon` which enables data parallelism.
 - Implementation Of the concept of lifetimes in this project could further increase run time safety, which can be implemented for various structs and other parameters for different parts of the code.
 - We can also incorporate a dynamic memory allocator as an addition to this project for game developers. One of the biggest reasons C++ is more popular than Rust in the game industry is that we cannot allocate memory in Rust, so adding this would increase ease of access for the users.
+
+
+**Instructions to run the Rust file**:
+- Extract the project zip file into the PC
+- Using a terminal, run the command: `cargo run > image.ppm`<br>
+<br>The C++ implementation can be found in the book link itself for comparison.<br>
+
