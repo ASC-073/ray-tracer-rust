@@ -87,8 +87,9 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
   `let elapsed_time = end_time - start_time;`<br>
   `eprint!("\nTime taken: {}.{:03} seconds\n", elapsed_time.as_secs(),elapsed_time.subsec_millis());`<br>
 <br>
-**CONTRIBUTION**
-<br>
+
+**CONTRIBUTION**<br>
+
 It was a collaborative effort from each and every member of our group.
 Tanay Doshi and Aaryan Chauhan focussed on the basic coding aspects, along with Smit Bagadia and Aditya Shah chipping in for POPL idea inspiration throughout the project. Designing and data collection was done by Smit and Aditya. Tanay and Aaryan analysed the performance of the Rust implementation with image testing for 3 different images and found some bits where it could be improved.
 
