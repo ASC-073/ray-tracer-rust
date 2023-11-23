@@ -69,12 +69,12 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 <br>The C++ implementation can be found in the guide link itself for comparison.<br>
 
 **Instructions to calculate the time of our output:**
-- In the main.rs file implement the following code:
-  use std::time::{Instant, Duration}; //before the main function
-  let start_time = Instant::now();  //first line inside main function
-  let end_time = Instant::now();    //at the end of main function
-  let elapsed_time = end_time - start_time;
-  eprint!("\nTime taken: {}.{:03} seconds\n", elapsed_time.as_secs(),elapsed_time.subsec_millis());
+- In the main.rs file implement the following code:<br><br>
+  `use std::time::{Instant, Duration}; //before the main function`<br>
+  `let start_time = Instant::now();  //first line inside main function`<br>
+  `let end_time = Instant::now();    //at the end of main function`<br>
+  `let elapsed_time = end_time - start_time;`<br>
+  `eprint!("\nTime taken: {}.{:03} seconds\n", elapsed_time.as_secs(),elapsed_time.subsec_millis());`<br>
 
 
 
