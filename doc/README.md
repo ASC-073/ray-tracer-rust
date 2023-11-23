@@ -54,11 +54,16 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 
 
 4) **RESULTS**:
+- Testing was done using these 3 images:<br><br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/c6267b71-79a0-4f06-8b4b-03b032b2ea7d)<br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/eee8c5e2-7762-4254-b284-6759e12e59ef)<br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/c2bc51d4-1fc8-4f40-a963-8308fa6b425f)<br>
+
 - Time comparison chart:<br><br>
 - ![comparision_chart](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/e0bfd8aa-f9b2-495c-9773-3c46622bf278)<br>
 
 - Time comparison graph between rust and c++:<br><br>
-- ![graph_popl](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/1abd6776-a646-4fbf-b6c1-0817d1a63537)<br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/0eae9418-4bd6-4ae9-99e7-5d194ad45c5a)<br>
 
 
 5) **POTENTIAL FOR FUTURE WORK**:
@@ -81,3 +86,11 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
   `let end_time = Instant::now();    //at the end of main function`<br>
   `let elapsed_time = end_time - start_time;`<br>
   `eprint!("\nTime taken: {}.{:03} seconds\n", elapsed_time.as_secs(),elapsed_time.subsec_millis());`<br>
+<br>
+
+**CONTRIBUTION**<br>
+
+It was a collaborative effort from each and every member of our group.
+Tanay Doshi and Aaryan Chauhan focussed on the basic coding aspects, along with Smit Bagadia and Aditya Shah chipping in for POPL idea inspiration throughout the project. Designing and data collection was done by Smit and Aditya. Tanay and Aaryan analysed the performance of the Rust implementation with image testing for 3 different images and found some bits where it could be improved.
+
+
