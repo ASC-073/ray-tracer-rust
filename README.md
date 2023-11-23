@@ -63,7 +63,7 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 - ![comparision_chart](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/e0bfd8aa-f9b2-495c-9773-3c46622bf278)<br>
 
 - Time comparison graph between rust and c++:<br><br>
-- ![graph_popl](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/1abd6776-a646-4fbf-b6c1-0817d1a63537)<br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/0eae9418-4bd6-4ae9-99e7-5d194ad45c5a)<br>
 
 
 5) **POTENTIAL FOR FUTURE WORK**:
