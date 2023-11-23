@@ -54,6 +54,11 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 
 
 4) **RESULTS**:
+- Testing was done using these 3 images:<br><br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/c6267b71-79a0-4f06-8b4b-03b032b2ea7d)<br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/eee8c5e2-7762-4254-b284-6759e12e59ef)<br>
+- ![image](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/c2bc51d4-1fc8-4f40-a963-8308fa6b425f)<br>
+
 - Time comparison chart:<br><br>
 - ![comparision_chart](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/e0bfd8aa-f9b2-495c-9773-3c46622bf278)<br>
 
