@@ -54,6 +54,12 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 
 
 4) **RESULTS**:
+- Time comparison chart:<br><br>
+- ![comparision_chart](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/e0bfd8aa-f9b2-495c-9773-3c46622bf278)<br>
+
+- Time comparison graph between rust and c++:<br><br>
+- ![graph_popl](https://github.com/ASC-073/ray-tracer-rust/assets/136118131/1abd6776-a646-4fbf-b6c1-0817d1a63537)<br>
+
 
 5) **POTENTIAL FOR FUTURE WORK**:
 - The guide encourages us to delve into parallelism, which could utilise various cores of our CPU with random seeds, in order to massively improve performance. We could expand on our project by using the concept of Fearless Concurrency in Rust - which allows us to implement concurrency without any risk of data races or risks straight out of the box. This is done using a crate called `Rayon` which enables data parallelism.
@@ -63,6 +69,15 @@ In this code we have passed the Ray struct by borrowing, which can be found in t
 
 **Instructions to run the Rust file**:
 - Extract the project zip file into the PC
-- Using a terminal, run the command: `cargo run > image.ppm`<br>
+- Using a terminal, run the command:
+  `cd <project_name>`
+  `cargo run > image.ppm`<br>
 <br>The C++ implementation can be found in the guide link itself for comparison.<br>
 
+**Instructions to calculate the time of our output:**
+- In the main.rs file implement the following code:<br><br>
+  `use std::time::{Instant, Duration}; //before the main function`<br>
+  `let start_time = Instant::now();  //first line inside main function`<br>
+  `let end_time = Instant::now();    //at the end of main function`<br>
+  `let elapsed_time = end_time - start_time;`<br>
+  `eprint!("\nTime taken: {}.{:03} seconds\n", elapsed_time.as_secs(),elapsed_time.subsec_millis());`<br>
